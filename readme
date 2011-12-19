@@ -1,1 +1,15 @@
 This is way to reconcile database tables (it may not be generally useful)
+
+It was designed to work in a specific environment where several tables got their data
+from different sources that should have been the same.
+
+Since the sources had independent upstream failures that caused them to be different, I developed
+this as means of understanding what the differences were, so that we could identify and repair them.
+
+Besides possibly having a limited usecase, it needs refactoring for duplication, but it is easy somewhat easier to understand this way.
+
+It is also designed to be run as a cap task having been deployed to a production server with access to both databases. This version assumes SQLite, but the original production version used MySQL.
+
+The cap tasks are specifically for a development env only, and were different for our production environment, no longer a part of this project.
+
+I haven't had a chance to run this code since modifying it, there maybe typos here or there.
